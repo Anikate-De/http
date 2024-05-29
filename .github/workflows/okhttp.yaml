@@ -16,6 +16,8 @@ on:
       - 'pkgs/http_client_conformance_tests/**'
   schedule:
     - cron: "0 0 * * 0"
+  workflow_dispatch:
+
 
 env:
   PUB_ENVIRONMENT: bot.github
@@ -55,4 +57,4 @@ jobs:
           # - pkgs/ok_http/example/android/app/build.gradle
           api-level: 21
           arch: x86_64
-          script: cd pkgs/ok_http/example && flutter test --timeout=120s integration_test/
+          script: cd pkgs/ok_http/example && flutter test --timeout=20s integration_test/
