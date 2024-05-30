@@ -57,4 +57,5 @@ jobs:
           # - pkgs/ok_http/example/android/app/build.gradle
           api-level: 21
           arch: x86_64
-          script: cd pkgs/ok_http/example && flutter test --timeout=20s integration_test/
+          emulator-options: -no-window -no-boot-anim
+          script: cd pkgs/ok_http/example && flutter test --timeout=360s integration_test/
